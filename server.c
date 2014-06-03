@@ -29,8 +29,8 @@ void send_file(char* filename, int socket)
 
 	// send file
 	do { 
-	    bytes_read = fread(buffer, 1, sizeof(buffer), file);
-    	bytes_written = write(socket, buffer, bytes_read);
+		bytes_read = fread(buffer, 1, sizeof(buffer), file);
+		bytes_written = write(socket, buffer, bytes_read);
 	} while (bytes_read > 0);
 	fclose(file);
 }
